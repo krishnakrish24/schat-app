@@ -1,0 +1,20 @@
+{
+  "name": "schat-app",
+  "version": "1.0.0",
+  "description": "Chat Application using Node",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "author": "SK",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moments": "0.0.2",
+    "socket.io": "^4.1.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

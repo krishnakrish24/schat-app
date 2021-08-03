@@ -2,6 +2,7 @@ const chatform = document.getElementById('chat-form');
 const chatmsgs = document.querySelector('.chat-messages');
 const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
+const sbar = document.querySelector('.chat-sidebar');
 
 //Get user name and Room
 const { username, room } = Qs.parse(location.search, {
@@ -66,7 +67,7 @@ function outputRoomName(room) {
     userList.innerHTML = '';
     users.forEach((user) => {
       const li = document.createElement('li');
-      li.innerHTML = `&nbsp;<span style="color:green;">●</span>&nbsp;${user.username}`;
+      li.innerHTML = `&nbsp;<span style="color:green;">●</span>&nbsp;&nbsp;${user.username}`;
       userList.appendChild(li);
     });
   }

@@ -5,22 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.css">
-  <title>SChat App</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  <title>SChat App</title>
 </head>
 <body>
   <div class="chat-container">
     <header class="chat-header">
-      <h1><i class="fas fa-phone fa-flip-horizontal"></i> SChat</h1>
-      <a href="index.html" class="btn">Leave Room</a>
+     
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" id="ham" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="navbarNav" aria-expanded="false">
+        <i class="fas fa-bars" style="color:#fff; font-size:26px;"></i>
+      </button>
+      <h2><i class="fas fa-phone fa-flip-horizontal"></i> SChat</h2>
+      <a href="index.html" class="btn btn-danger" id="leave-btn">Leave Room</a>
     </header>
     <main class="chat-main">
-      <div class="chat-sidebar">
-        <h3><i class="fas fa-comments"></i> Room Name:</h3>
+      <nav class="navbar navbar-expand-sm" style="padding: 0;">
+      <div class="chat-sidebar collapse navbar-collapse" id="collapsibleNavbar">
+        <!--<h3><i class="fas fa-comments"></i> Room</h3>
         <h2 id="room-name"></h2>
         <h3><i class="fas fa-users"></i> Users</h3>
         <ul id="users">
+        </ul>-->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <h3><i class="fas fa-comments"></i> Room</h3>
+            <h2 id="room-name"></h2>
+            <h3><i class="fas fa-users"></i> Users</h3>
+            <ul id="users">
+            </ul>
+          </li>
         </ul>
-      </div>
+      </div></nav>
       <div class="chat-messages">
 
       </div>
@@ -34,7 +49,7 @@
           required
           autocomplete="off"
         />
-        <button class="btn"><i class="fas fa-paper-plane"></i> Send</button>
+        <button class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send</button>
       </form>
     </div>
   </div>
@@ -42,5 +57,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js" integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="/socket.io/socket.io.js"></script>
   <script src="js/main.js"></script>
-</body>
-</html>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script></html>
